@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedirLink</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="//cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <script src="//cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <!-- 
+        -// artinya mengikuti protocol yang digunakan oleh website ini
+        http:// 
+        - // otomatis mengikuti menjadi http://
+
+        https://
+        - // otomatis mengikuti menjadi https://
+     -->
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+    <div class="header" style="background-color: #78A1BB;">
+        <div class="left">
+            <a href="/" class="headertitle">RedirLink</a>
+        </div>
+        
+        <div class="right">
+            <a href="/logout" class="logoutBtn" style="padding-left: 1rem;"> 
+                <i class="fa fa-sign-out fa-2x" aria-hidden="true" style="color: #283044;"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- untuk admin -->
+        <div class="container" style="padding: 2rem;">
+                <a href="/deleteAll" class="deleteAllBtn">
+                    <button class="deleteButton">DELETE ALL</button>
+                </a>
+                <br><br>
+            <table id="table_link" class="table">
+                <thead>
+                    <tr>
+                    <th class="originalLinks" style="text-align: center;" name="originallinks">Original Links</th>
+                    <th class="shortenedlinks" style="text-align: center;" name="shortenedlinks">Shortened Links</th>
+                    <th class="countvisit" style="text-align: center;" name="countvisit">Count Visit</th>
+                    <th></th>
+                    </tr>
+                </thead>
+                <tbody style="text-align: center;"> 
+                    <% url_list.forEach(function(url) { %>
+                    <tr>
+                        <td style="text-align: center;"><%= url.url %></td>
+                        <td style="text-align: center;">https://redir.tugas.link/<%= url.shortUrl %></td>
+                        <td style="text-align: center;"><%= url.counter %></td>
+                        <td> <a href="/<%= url.shortUrl %>/deleteRecord">
+                            <i class="fa fa-trash fa-2x" aria-hidden="true" style="color: #283044;"></i>
+                        </a></td>
+                    </tr>
+                    <% }); %>
+                    
+                </tbody>
+
+            </table>
+        </div>
+
+    <div class="footer fixed-bottom" style="background-color: #78A1BB; padding: 1rem;">
+        <h5 class="footertext" style="padding-left: 3rem; color: #EBF5EE;">Made by Rizky & Veli</h5>
+    </div>
+</body>
+
+<script>
+    $(document).ready( function () {
+    $('#table_link').DataTable();
+} );
+</script>
+</html>

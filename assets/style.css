@@ -1,0 +1,314 @@
+body{
+    font-family: 'Roboto','sans-serif';
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #78A1BB;
+    padding: 1rem;
+}
+
+.headertitle{
+    font-size: 35px;
+    font-weight: bold;
+    padding-left: 2rem;
+    color: #EBF5EE;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.headertitle:hover{
+    color: #EBF5EE;
+}
+
+.content-title{
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.content-center{
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.content-box{
+    margin-top: 12%;
+    margin-left: 30%;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    border-radius: 15px;
+    width: 600px;
+}
+
+#shortenlink{
+    padding: 0.4rem;
+    width: 300px;
+    border-radius: 5px;
+    margin-right: 1rem;
+}
+
+.copyBtn{
+    background-color: #78A1BB;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 6px;
+    display: block;
+}
+
+.copyBtn:hover{
+    background-color: #587c92;
+}
+
+.right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 2rem;
+}
+
+.right input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
+.right button{
+    background: #283044;
+    color: #EBF5EE;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 7px;
+    display: block;
+
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modalHeader{
+    margin-left: 20px;
+}
+
+.modal-content {
+    /* display: flex; */
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 30px 20px;
+    border: 1px solid #888;
+    border-radius: 15px;
+    width: 80%;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s
+}
+
+@-webkit-keyframes slideIn {
+    from {bottom: -300px; opacity: 0} 
+    to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+    from {bottom: -300px; opacity: 0}
+    to {bottom: 0; opacity: 1}
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.linkForm label{
+    margin-left: 20px;
+    font-size: 14pt;
+}
+
+.linkForm input{
+    margin-left: 20px;
+    padding: 10px;
+    width: 90%;
+    border-radius: 5px;
+}
+
+.titlelinkForm label{
+    margin-left: 20px;
+    font-size: 14pt;
+}
+
+.titlelinkForm input{
+    margin-left: 20px;
+    padding: 10px;
+    width: 90%;
+    border-radius: 5px;
+}
+
+button{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    width: 120px;
+    border-style: none;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    align-items: center;
+}
+
+#createButton:hover{
+    background-color: rgb(30, 43, 61);
+    color: #EBF5EE;
+    /* transform: translateY(-7px); */
+}
+
+#createButton{
+    font-size: 15px;
+}
+
+.confirmButton{
+    padding: 0.5rem;
+    text-decoration: none;
+    background-color: #283044;
+    color: white;
+    text-align: center;
+    font-size: bold;
+}
+
+.confirmButton:hover{
+    background-color: #1d2333;
+}
+
+#confirmBtn{
+    margin-top: 1rem;
+    margin-left: 1.25rem;
+    border-radius: 5px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.loginbtn{
+    margin-left: 14.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #65B891;
+    border-radius: 8px;
+    width: 120px;
+}
+
+.loginbtn:hover{
+    background-color: #4f9474;
+    transform: translateY(+7px);
+}
+
+.content{
+    padding-top: 2rem;
+}
+
+table{
+    border-spacing: 1; 
+    border-collapse: collapse; 
+    background:white;
+    border-radius:6px;
+    overflow:hidden;
+    max-width:800px; 
+    width:100%;
+    margin:0 auto;
+    position:relative; 
+}
+
+thead tr{
+    height:60px;
+    background:#344966;
+    font-size:16px;
+}
+
+thead tr th{
+    color: white;
+    align-items: center;
+}
+
+tbody tr{
+    height:48px;
+    border-bottom:1px solid #E3F1D5;
+}
+
+.deleteButton{
+    background-color: #c1121f;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 0.5rem;
+    align-content: center;
+}
+
+.deleteButton:hover{
+    background-color: #91000a;
+}
+
+/* Responsive */
+@media (max-width: 1400px){
+
+    /* login page */
+    .container{
+       padding-top: 7rem;
+       padding-right: 30rem;
+    }
+
+    .content-box h1{
+        padding-right: 0.5rem;
+    }
+
+    /* tablelink page */
+    .table{
+        font-size: 10pt;
+        align-items: center;
+        justify-content: center;
+        padding-right: 2rem;
+        margin-right: 2rem;
+    }
+
+    .countvisit{
+        font-size: 10pt;
+    }
+
+    /* shortenlink page */
+    .text{
+        padding-right: 10rem;
+    }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedirLink</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/assets/style.css">
+    <script src="/assets/modal.js" defer></script>
+    <script src="/assets/sendLink.js" defer></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+</head>
+<body style="background-color: #283044;">
+    <!-- Header -->
+    <div class="header" style="background-color: #78A1BB;">
+        <div class="left">
+            <a href="/" class="headertitle">RedirLink</a>
+        </div>
+        
+        <div class="right">
+            <div class="button">
+                <button id="createButton">CREATE</button>
+            </div>
+            <a href="/logout" class="logoutBtn" style="padding-left: 1rem;"> 
+                <i class="fa fa-sign-out fa-2x" aria-hidden="true" style="color: #283044;"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- modal buat input linksnya -->
+    <div id="addModal" class="modal">
+        <div class="modal-content">
+           <div class="modalHeader">
+            <span class="close">&times;</span>
+            <h3>Create Link</h3>
+        </div>
+
+        <div class="modalBody">
+            <form action="/shorter" method="POST" name="formLink">
+                <br>
+
+                <!-- link -->
+                <div class="linkForm">
+                    <label for="link" class="link">Input your link</label><br>
+                    <input type="text" class="links" id="links" name="url" required="">
+                </div>
+                <br>
+                <button class="confirmButton" type="submit" id="confirmBtn" style="margin-left: 1.25rem; border-radius: 6px;">CONFIRM</button>
+            </form>
+
+        </div> 
+        </div>
+    </div>
+    
+    <!-- content -->
+    <div class="container-sm">
+        <div class="about-redirlink">
+            <p class="topTitle" style="padding-top: 5rem; color: #EBF5EE; font-size: 25pt; text-align: left;">RedirLink is a free website with a tool to shorten your link <br>Create a shortened link for you to easily remember it !</p>
+            <br>
+            <br>
+            <p class="midbottTitle" style="color: #EBF5EE; font-size: 22pt; text-align: left;">Simple and fast URL shortener! <br></p>
+            <p class="bottTitle"style=" color: #EBF5EE; font-size: 15pt;text-align: left;">
+                You can use RedirLink to simplify your URL from websites<br>Copy paste the original URL and click the create button to shorten the URL <br> On the next page, you can also copy the shortened URL and share it to your family or friends on internet
+            </p>
+        </div>
+
+    </div>
+    
+    <div class="footer fixed-bottom" style="background-color: #78A1BB; padding: 1rem;">
+        <h5 class="footertext" style="padding-left: 3rem; color: #EBF5EE;">Made by Rizky & Veli</h5>
+    </div>
+
+</body>
+</html>

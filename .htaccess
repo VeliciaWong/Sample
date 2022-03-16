@@ -1,0 +1,12 @@
+Options +FollowSymLinks -Multiviews
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-s
+RewriteRule (.+\.html)$ views/$1 [L]
+
+RewriteRule ^/?$ index.html [L]
+#RewriteCond %{DOCUMENT_ROOT} !-f
+#RewriteRule ^(.*)$ assets/$1 [L]
